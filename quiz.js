@@ -127,9 +127,17 @@ questionContainerDiv.on("click", ".q-choice", function() {
     // I removed the styleNext parameter. Not sure why it would be needed. See me notes inside the function below. JD
     function nextButton(){
       var classes = "w3-button w3-black w3-padding-large w3-large w3-margin-top next-question";
+      var nextBtn = $("<button>").addClass(classes);
+
+      // use alternate text when on the final question
+      if (currentQuestionIndex === questions.length - 1) {
+        nextBtn.text("Finish");
+      } else {
+        nextBtn.text("Next Question");
+      }
+
       // I think the text for going to the next question should just be "Next"?? not sure why the text
       // for the next questions would be different each time.
-      var nextBtn = $("<button>").addClass(classes).text("Next");
       // i don't think the button to advance to the next question needs a value. JD
       // nextBtn.val(styleNext);
       return nextBtn;
