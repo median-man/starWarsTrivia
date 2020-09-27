@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>|| The Galactic Game ||</title>
 
-  <link rel="stylesheet" href="style.css">
+  <!-- fix the order of the style sheets. Remember with css, the last takes
+  precedence. This means your sheet should always be linked after any frameworks
+  in order to override the framework styles. JD -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -25,12 +28,14 @@
 
 <body class="bg-image1">
  
- 
+  <!-- temp location for showing score. should be replaced in a later issue with
+  better styling. The JavaScript depends on the id. Make sure you preserve it.
+  -->
+  <div id="score" style="position: absolute; right: 1rem; top: 1rem; color: white;">Score: 10</div>
   <div class="w3-row-padding w3-padding-64 w3-container">
     <div id="question-container" class="w3-content">
       
     </div>
-    <div id="nextQ" class="w3-content"></div>
   </div>
 
   <script
